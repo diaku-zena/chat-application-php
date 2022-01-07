@@ -6,10 +6,17 @@ searchBtn.onclick = () => {
     searchBar.classList.toggle("active");
     searchBar.focus();
     searchBtn.classList.toggle("active");
+    searchBar.value = "";
 }
 
 searchBar.onkeyup = () => {
     let searchTerm = searchBar.value;
+
+    if(searchTerm != null){
+        searchBar.classList.add("active");
+    } else {
+        searchBar.classList.remove("active");
+    }
     
     // starting Ajax
     let xhr = new XMLHttpRequest();
@@ -19,7 +26,7 @@ searchBar.onkeyup = () => {
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 let data = xhr.response;
-                console.log(data);
+                usersList.innerHTML = data;
             }
         }
     }
@@ -37,7 +44,9 @@ setInterval(() => {
             if(xhr.status == 200){
                 let data = xhr.response;
                 
-                usersList.innerHTML = data;
+                if(!searchBar.classList.contains("active")){
+                    usersList.innerHTML = data;
+                }
             }
         }
     }
