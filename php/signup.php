@@ -68,5 +68,5 @@
             echo "$email - este email nao é válido";
         }
     } else {
-        echo "All inputs are empty!";
+        echo "Preencha os campos obrigatorios";
     } 
