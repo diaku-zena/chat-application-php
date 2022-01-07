@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.wrapper{
+    background-color: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.1), 
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+/* Signedup Form Css Code */
+.form{
+    padding: 25px 30px;
+}
+
+.form header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.form form{
+    margin: 20px 0;
+}
+
+.form form .error-txt{
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+}
+
+.form form .name-details{
+    display: flex;
+}
+
+.form form .name-details .field:first-child{
+    margin-right: 10px;
+}
+
+.form form .name-details .field:last-child{
+    margin-left: 10px;
+}
+
+.form form .field{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form form .field i{
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.form form .field i.active::before{
+    color: #333;
+    content: "\f070";
+
+}
+
+.form form .field label{
+    margin-bottom: 2px;
+}
+
+.form form .input input{
+    outline: none;
+}
+
+.form form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form form .image input{
+    font-size: 17px;
+}
+
+.form form .button input{
+    margin-top: 13px;
+    height: 45px;
+    font-size: 17px;
+    border: none;
+    font-weight: 400;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form .link{
+    font-size: 17px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form .link a {
+    color: #333;
+}
+
+.form .link a:hover{
+    text-decoration: underline;
+}
+
+/* Users Area Css Code */
+
+.users{
+    padding: 25px 30px;
+}
+
+.users header, .users-list a{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.wrapper img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+:is(.users, .users-list) .content{
+    display: flex;
+    align-items: center;
+}
+
+.users header .content img{
+    width: 50px;
+    height: 50px;
+}
+
+:is(.users, .users-list) .details{
+    color: #000;
+    margin-left: 15px;
+}
+:is(.users, .users-list) .details span{
+    font-size: 18px;
+    font-weight: 600;
+}
+.users header .logout{
+    color: #fff;
+    font-size: 17px;
+    background-color: #333;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+
+.users .search{
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users .search .text{
+    font-size: 18px;
+}
+
+.users .search input{
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    font-size: 16px;
+    padding: 0 13px;
+    border: #ccc solid 1px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.users .search button{
+    height: 42px;
+    width: 47px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+}
+
+.users-list{
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+:is(.chat-box ,.users-list)::-webkit-scrollbar{
+    width: 0px;
+}
+
+.users-list a{
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    padding-right: 10px;
+    border-bottom-color: #f1f1f1;
+}
+
+.users-list a:last-child{
+    border: none;
+    margin-bottom: 0px;
+}
+
+.users-list a .content img{
+    width: 40px;
+    height: 40px;
+    
+}
+
+.users-list a .content p{
+    color: #676767
+}
+
+.users-list a .status-dot{
+    font-size: 12px;
+    color: #43a177;
+}
+
+
+/* We'll use this class name in PHP to show offline status */
+.users-list a .status-dot.offline{
+    color: #ccc;
+}
+
+/* Chat Area Css Code */
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+
+}
+
+.chat-area header .back-icon{
+    font-size: 18px;
+    color: #333;
+}
+
+.chat-area header img{
+    width: 45px;
+    height: 45px;
+    margin: 0 15px;
+}
+
+.chat-area header span{
+    font-size: 17px;
+    font-weight: 530;
+}
+
+.chat-box{
+    height: 500px;
+    background-color: #f7f7f7;
+    overflow-y: auto;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%), 
+                inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+}
+
+.chat-box .chat{
+    margin: 15px 0;
+}
+
+.chat-box .chat p{
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+                0 16px 16px -16px rgb(0 0 0 / 20%) ;
+    word-wrap: break-word;
+}
+
+.chat-box .outgoing{
+    display: flex;
+}
+
+.outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+
+.outgoing .details p{
+   background-color: #333;
+   color: #fff;
+   border-radius: 18px 18px 0 18px;
+}
+
+.chat-box .incoming {
+    display: flex;
+    align-items: flex-end;
+}
+.chat-box .incoming img{
+    width: 35px;
+    height: 35px;
+}
+
+.incoming .details{
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+
+.chat-box .incoming .details p{
+    background-color: #fff;
+    color: #333;
+    border-radius: 18px 18px 18px 0;
+}
+
+.chat-area .typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typing-area input{
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: #ccc 1px solid;
+    padding: 0 13px;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.chat-area button{
+    width: 55px;
+    outline: none;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+}
