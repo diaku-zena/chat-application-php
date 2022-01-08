@@ -1,0 +1,18 @@
+{
+    "name": "elias/chat-aplication",
+    "description": "A chat app",
+    "autoload": {
+        "psr-4": {
+            "Elias\\ChatAplication\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "diakuzena",
+            "email": "diakuzena@gmail.com"
+        }
+    ],
+    "require": {
+        "PHP": "8.0.*"
+    }
+}
